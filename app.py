@@ -31,17 +31,20 @@ for img, caption in photos:
     else:
         st.warning(f"{img} not found")
 
-# # 🎥 Video Section
-# st.header("🎥 Special Videos For You")
 
-# videos = ["video1.mp4", "video2.mp4"]
 
-# for vid in videos:
-#     if os.path.exists(vid):
-#         video_file = open(vid, 'rb')
-#         st.video(video_file.read())
-#     else:
-#         st.warning(f"{vid} not found")
+
+# 🎥 Video Section
+st.header("🎥 Special Videos For You")
+
+videos = ["video1.mp4"]
+
+for vid in videos:
+    if os.path.exists(vid):
+        video_file = open(vid, 'rb')
+        st.video(video_file.read())
+    else:
+        st.warning(f"{vid} not found")
 
 
 
