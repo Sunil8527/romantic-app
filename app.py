@@ -1,6 +1,9 @@
 import streamlit as st
 import os
 from datetime import datetime
+from PIL import Image, ImageDraw, ImageFont
+import io
+
 st.set_page_config(page_title="For My Love ❤️", page_icon="❤️")
 
 # 🎵 Background Music (add your audio file in same folder)
@@ -75,13 +78,33 @@ if st.button("Submit 💖"):
             st.write(ans)
             text_data += f"{q}\n{ans}\n\n"
 
-    # 📥 Download button (like snapshot)
+# 🖼️ Create PNG image
+    img = Image.new('RGB', (800, 1000), color=(255, 240, 245))
+    draw = ImageDraw.Draw(img)
+
+    try:
+        font = ImageFont.truetype("arial.ttf", 20)
+    except:
+        font = ImageFont.load_default()
+
+    y_text = 20
+    for line in text_data.split("\n"):
+        draw.text((20, y_text), line, fill=(0, 0, 0), font=font)
+        y_text += 30
+
+    # Save to bytes
+    img_bytes = io.BytesIO()
+    img.save(img_bytes, format="PNG")
+    img_bytes.seek(0)
+
+    # 📥 Download button for PNG
     st.download_button(
-        label="📥 Download Your Answers 💌",
-        data=text_data,
-        file_name="love_answers.txt",
-        mime="text/plain"
+        label="📥 Download as Image 💖",
+        data=img_bytes,
+        file_name="love_answers.png",
+        mime="image/png"
     )
 
 st.markdown("---")
 st.write("Made with ❤️ just for you")
+
