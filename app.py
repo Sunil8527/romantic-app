@@ -72,3 +72,4 @@ if st.button("Submit 💖"):
 
 st.markdown("---")
 st.write("Made with ❤️ just for you")
+st.write("Pls my love share your answer ss to me on whatsapp")
