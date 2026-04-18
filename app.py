@@ -50,11 +50,11 @@ questions = [
     "What was your first impression of me? 💭",
     "When did you realize you love me? ❤️",
     "What is your favorite memory with me? 🌸",
-    "What do you love most about us? 💑",
+    "How much you love me darling? 💑",
     "Where do you want to travel together? ✈️",
-    "What makes you happiest in our relationship? 😊",
+    "Tell me about our 1st night how was your experience? 😊",
     "One thing you wish we do more together? 💫",
-    "Your dream date with me? 🌙"
+    "How romanctic you are with me ? 🌙"
 ]
 
 st.header("💌 Answer these for me")
