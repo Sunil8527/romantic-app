@@ -20,7 +20,7 @@ photos = [
     ("photo1.jpg", "Our First Memory ❤️"),
     ("photo2.jpg", "My Favorite Moment 💕"),
     ("photo3.jpg", "Forever Together 💑"),
-    ("photo7.jpg", "Another Cute Moment 😍"),
+    # ("photo7.jpg", "Another Cute Moment 😍"),
     ("photo5.jpg", "Smiles Together 😊"),
     ("photo6.jpg", "My 1st child ❤️")
 ]
