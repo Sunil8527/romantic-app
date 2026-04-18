@@ -10,8 +10,8 @@ st.set_page_config(page_title="For My Love ❤️", page_icon="❤️")
 audio_file = open('romantic.mp3', 'rb')
 st.audio(audio_file.read(), format='audio/mp3')
 
-st.title("💖 A Special Page Just For You 💖")
-st.write("Hey love, I made this just for you 😊")
+st.title("💖 A Special gift for my Wife 💖")
+st.write("Hey Mishty, I made this just for you 😊")
 
 # 📸 Photo Gallery
 st.header("📸 Our Beautiful Memories")
@@ -68,7 +68,7 @@ for q in questions:
     responses[q] = st.text_input(q)
 
 if st.button("Submit 💖"):
-    st.success("Aww, thank you for answering! I love you ❤️")
+    st.success("Aww my Wifeeee, thank you for answering! I love you ❤️")
 
     st.subheader("Your Answers 💕")
 
@@ -109,5 +109,5 @@ if st.button("Submit 💖"):
     )
 
 st.markdown("---")
-st.write("Made with ❤️ just for you")
+st.write("Thank you Darling for your response🥰")
 
