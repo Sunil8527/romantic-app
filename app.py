@@ -65,11 +65,23 @@ if st.button("Submit 💖"):
     st.success("Aww, thank you for answering! I love you ❤️")
 
     st.subheader("Your Answers 💕")
+
+    text_data = "💖 Your Lovely Answers 💖\n\n"
+    text_data += f"Date: {datetime.now()}\n\n"
+
     for q, ans in responses.items():
         if ans:
             st.write(f"**{q}**")
             st.write(ans)
+            text_data += f"{q}\n{ans}\n\n"
+
+    # 📥 Download button (like snapshot)
+    st.download_button(
+        label="📥 Download Your Answers 💌",
+        data=text_data,
+        file_name="love_answers.txt",
+        mime="text/plain"
+    )
 
 st.markdown("---")
 st.write("Made with ❤️ just for you")
-st.write("Pls my love share your answer ss to me on whatsapp")
